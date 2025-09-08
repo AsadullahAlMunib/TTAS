@@ -1,6 +1,6 @@
 /**
  * TTAS (Text Typing Animation Scroll)
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: Md Asadullah Al Munib
  * A robust, performant, and feature-rich vanilla JavaScript library
  * for typewriter animation for text on scroll.
@@ -27,13 +27,16 @@
         element.style.visibility = 'visible';
         element.style.opacity = '1';
         element.innerHTML = "";
-
-        // Parse HTML
+    
+        // Cursor শুরুতেই বসানো
+        const cursor = document.createElement("span");
+        cursor.className = "ttas-cursor";
+        element.appendChild(cursor);
+    
         const tempDiv = document.createElement("div");
         tempDiv.innerHTML = html;
         const nodes = Array.from(tempDiv.childNodes);
-
-        // Count text length (excluding tags)
+    
         const totalText = nodes.reduce((acc, node) => {
             if (node.nodeType === Node.TEXT_NODE) {
                 return acc + node.textContent.length;
@@ -42,27 +45,23 @@
             }
             return acc;
         }, 0);
-
+    
         const speed = totalText > 0 ? totalDuration / totalText : totalDuration;
-
+    
         let nodeIndex = 0, charIndex = 0;
-
+    
         function typeNext() {
             if (nodeIndex >= nodes.length) {
-                // শেষে cursor যোগ করা
-                const cursor = document.createElement("span");
-                cursor.className = "ttas-cursor";
-                element.appendChild(cursor);
                 element.removeAttribute("aria-live");
                 return;
             }
-
+    
             const currentNode = nodes[nodeIndex];
-
+    
             if (currentNode.nodeType === Node.TEXT_NODE) {
                 const text = currentNode.textContent;
                 if (charIndex < text.length) {
-                    element.appendChild(document.createTextNode(text.charAt(charIndex)));
+                    element.insertBefore(document.createTextNode(text.charAt(charIndex)), cursor);
                     charIndex++;
                     setTimeout(typeNext, speed);
                 } else {
@@ -72,11 +71,11 @@
                 }
             } else if (currentNode.nodeType === Node.ELEMENT_NODE) {
                 const clone = currentNode.cloneNode(false);
-                element.appendChild(clone);
-
+                element.insertBefore(clone, cursor);
+    
                 const innerText = currentNode.textContent;
                 let innerIndex = 0;
-
+    
                 function typeInside() {
                     if (innerIndex < innerText.length) {
                         clone.appendChild(document.createTextNode(innerText.charAt(innerIndex)));
@@ -88,14 +87,14 @@
                         setTimeout(typeNext, speed);
                     }
                 }
-
+    
                 typeInside();
             } else {
                 nodeIndex++;
                 setTimeout(typeNext, speed);
             }
         }
-
+    
         typeNext();
     }
 
@@ -310,7 +309,7 @@
 
     window.TTAS = {
         init: initTTAS,
-        version: '1.3.0',
+        version: '1.3.1',
         supportsObserver: supportsIntersectionObserver,
         destroy: function() {
             const elements = document.querySelectorAll('[data-ttas]');
