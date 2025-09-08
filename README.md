@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-1.3.0-blue)
+![Version](https://img.shields.io/badge/version-1.3.1-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![CDN](https://img.shields.io/badge/CDN-jsDelivr-orange)
 
@@ -26,7 +26,7 @@ TTAS.js is a lightweight, dependency-free JavaScript library that animates text 
 Place this before `</body>` in your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/AsadullahAlMunib/TTAS@v1.3.0/ttas.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/AsadullahAlMunib/TTAS@v1.3.1/ttas.js"></script>
 ```
 ---
 
@@ -48,30 +48,30 @@ Add the `data-ttas` attribute to any element you want to animate. The attribute�
 
 - **Basic: 3000ms total duration**
 ```html
-<div data-ttas="3000">
+<p data-ttas="3000">
     Simple typewriter effect
-</div>
+</p>
 ```
 
 - **Mobile/Desktop speeds: 2500ms on mobile, 4000ms on desktop**
 ```html
-<div data-ttas="2500,4000">
+<p data-ttas="2500,4000">
  	Fast on mobile, slow on desktop
-</div>
+</p>
 ```
 
 - **Speed with offset: 3000ms duration; 100px trigger offset**
 ```html
-<div data-ttas="3000;100">
+<p data-ttas="3000;100">
 	Offset trigger at 100px
-</div>
+</p>
 ```
 
 - **Full config: mobile/desktop speed; mobile/desktop offset**
 ```html
-<div data-ttas="2500,4000;50,150">
+<p data-ttas="2500,4000;50,150">
 	Mobile: 2.5s/50px, Desktop: 4s/150px
-</div>
+</p>
 ```
 
 ---
@@ -105,21 +105,25 @@ data-ttas="[speed];[offset]"
 
 ---
 
-## 🔄 v1.2.1 vs v1.3.0 Comparison
+## 🔄 v1.2.1 vs v1.3.1 Comparison
 
-| Feature / Behavior                | v1.2.1 | v1.3.0 |
+| Feature / Behavior                | v1.2.1 | v1.3.1 |
 |----------------------------------|:------:|:------:|
 | Plain text typing                | ✔️     | ✔️     |
 | HTML tag support (`<strong>`, `<i>`, `<a>`) | ❌     | ✔️     |
 | Rich text animation preserved     | ❌     | ✔️     |
-| Cursor shows only after typing    | ✔️     | ✔️ (default) |
+| Cursor shows only after typing    | ✔️     | ✔️ (default), but tweakable |
+| Cursor visible from start         | ❌     | ✔️ (with small change) |
 | Speed config (mobile/desktop)     | ✔️     | ✔️     |
 | Offset config (px / auto font height) | ✔️  | ✔️     |
+| IntersectionObserver support      | ✔️     | ✔️     |
 | Fallback (no IO support)          | ✔️     | ✔️     |
+| Accessibility (`aria-live`)       | ✔️     | ✔️     |
 | Destroy / Reset                   | ✔️     | ✔️     |
+| No external dependencies          | ✔️     | ✔️     |
 
 👉 **In short:**  
-- v1.3.0 = v1.2.1 + **HTML-preserve engine**  
+- v1.3.1 = v1.2.1 + **HTML-preserve engine** + **better cursor control**.  
 - No features have been removed, but new features have been added.
 
 ---
