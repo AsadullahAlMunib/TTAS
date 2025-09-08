@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-1.2.0-blue)
+![Version](https://img.shields.io/badge/version-1.2.1-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![CDN](https://img.shields.io/badge/CDN-jsDelivr-orange)
 
@@ -26,7 +26,7 @@ TTAS.js is a lightweight, dependency-free JavaScript library that animates text 
 Place this before `</body>` in your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/AsadullahAlMunib/TTAS@v1.2.0/ttas.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/AsadullahAlMunib/TTAS@v1.2.1/ttas.js"></script>
 ```
 ---
 
