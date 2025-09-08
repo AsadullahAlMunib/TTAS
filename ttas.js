@@ -1,6 +1,6 @@
 /**
  * TTAS (Text Typing Animation Scroll)
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: Md Asadullah Al Munib 
  * A robust, performant, and feature-rich vanilla JavaScript library
  * for typewriter animation for text on scroll.
@@ -252,7 +252,7 @@
     
     window.TTAS = {
         init: initTTAS,
-        version: '1.1.0',
+        version: '1.2.0',
         supportsObserver: supportsIntersectionObserver,
         destroy: function() {
             const elements = document.querySelectorAll('[data-ttas]');
