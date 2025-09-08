@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-1.2.1-blue)
+![Version](https://img.shields.io/badge/version-1.3.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![CDN](https://img.shields.io/badge/CDN-jsDelivr-orange)
 
@@ -26,7 +26,7 @@ TTAS.js is a lightweight, dependency-free JavaScript library that animates text 
 Place this before `</body>` in your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/AsadullahAlMunib/TTAS@v1.2.1/ttas.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/AsadullahAlMunib/TTAS@v1.3.0/ttas.js"></script>
 ```
 ---
 
@@ -102,6 +102,25 @@ data-ttas="[speed];[offset]"
 | 5 | `data-ttas="1500,3000;100"` | 1.5s/mobile, 3s/desktop with 100px offset | Different speeds with Offset |
 | 6 | `data-ttas="1500;100,300"` | 1.5s with 100px/mobile 300px/desktop offset | Speed with different Offset |
 | 7 | `data-ttas="1500,3000;50,100"` | 1.5s/mobile, 3s/desktop with different offsets | Full device-specific control |
+
+---
+
+## 🔄 v1.2.1 vs v1.3.0 Comparison
+
+| Feature / Behavior                | v1.2.1 | v1.3.0 |
+|----------------------------------|:------:|:------:|
+| Plain text typing                | ✔️     | ✔️     |
+| HTML tag support (`<strong>`, `<i>`, `<a>`) | ❌     | ✔️     |
+| Rich text animation preserved     | ❌     | ✔️     |
+| Cursor shows only after typing    | ✔️     | ✔️ (default) |
+| Speed config (mobile/desktop)     | ✔️     | ✔️     |
+| Offset config (px / auto font height) | ✔️  | ✔️     |
+| Fallback (no IO support)          | ✔️     | ✔️     |
+| Destroy / Reset                   | ✔️     | ✔️     |
+
+👉 **In short:**  
+- v1.3.0 = v1.2.1 + **HTML-preserve engine**  
+- No features have been removed, but new features have been added.
 
 ---
 
