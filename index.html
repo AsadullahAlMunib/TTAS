@@ -36,8 +36,7 @@
             <div class="feature">
                 <h3>🛠️ Simple Installation</h3>
                 <p>Paste this Script just before <code>&lt;/body&gt;</code> in your HTML:</p>
-                <div class="code" onclick="navigator.clipboard.writeText(this.querySelector('pre').textContent).then(()=>{
-                this.querySelector('span').style.color='#20c997';this.style.fontWeight='bold';this.querySelector('span').textContent='// ✅ Copied!';});">   
+                <div class="code" onclick="copyCode(this)">   
                     <span>// Click to Copy:</span>
                     <pre>&lt;script src="https://cdn.jsdelivr.net/gh/AsadullahAlMunib/TTAS@v1.3.1/ttas.js"&gt;&lt;/script&gt;</pre>
                 </div>
@@ -288,5 +287,6 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/gh/AsadullahAlMunib/TTAS@v1.3.1/ttas.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
