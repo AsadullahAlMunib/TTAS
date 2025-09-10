@@ -57,7 +57,7 @@
             <div class="example">
                 <h3>Example 1: Simple Animation</h3>
                 <p>This text will animate over 3 seconds when scrolled into view:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="3000"&gt;</pre>
                     <pre>    This text will animate over 3 seconds when scrolled into view.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -68,7 +68,7 @@
             <div class="example">
                 <h3>Example 2: Different Mobile/Desktop Speeds</h3>
                 <p>Different speeds for different devices. 2 seconds on mobile, 4 seconds on desktop:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="2000,4000"&gt;</pre>
                     <pre>    This text animates faster on mobile devices (2s) than on desktop (4s).</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -79,7 +79,7 @@
             <div class="example">
                 <h3>Example 3: Static Text Fallback</h3>
                 <p>Show text immediately without animation:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas=""&gt;</pre>
                     <pre>    This text appears immediately without any animation.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -98,7 +98,7 @@
             <div class="example">
                 <h3>Example 4: Offset Configuration</h3>
                 <p>Trigger the animation 100px before the element enters the viewport:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="2500;100"&gt;</pre>
                     <pre>    This animation triggers 100px before entering the viewport.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -109,7 +109,7 @@
             <div class="example">
                 <h3>Example 5: Two Speeds, One Offset</h3>
                 <p>Different speeds for mobile and desktop with a single offset value:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="2000,4000;100"&gt;</pre>
                     <pre>    Mobile: 2 seconds, Desktop: 4 seconds, Both trigger 100px early.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -120,7 +120,7 @@
             <div class="example">
                 <h3>Example 6: One Speed, Two Offsets</h3>
                 <p>Same speed for both devices but different trigger offsets:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="3000;50,100"&gt;</pre>
                     <pre>    Same 3-second animation, Mobile: 50px offset, Desktop: 100px offset.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -131,7 +131,7 @@
             <div class="example">
                 <h3>Example 7: Full Device-Specific Control</h3>
                 <p>Full control for both devices. Different speeds and offsets for mobile and desktop:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="1500,3000;50,100"&gt;</pre>
                     <pre>    This has different speeds and offsets for mobile and desktop devices.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -150,7 +150,7 @@
             <div class="example">
                 <h3>Example 8: Bold Text Formatting</h3>
                 <p>Text with <strong>bold formatting</strong> that will animate with the typewriter effect:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="3000"&gt;</pre>
                     <pre>    This text contains &lt;strong&gt;bold text&lt;/strong&gt; that will animate with the rest of the content.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -161,7 +161,7 @@
             <div class="example">
                 <h3>Example 9: Italic Text Formatting</h3>
                 <p>Text with <em>italic formatting</em> that will animate character by character:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="3000"&gt;</pre>
                     <pre>    This text contains &lt;em&gt;italicized text&lt;/em&gt; that will animate character by character.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -172,7 +172,7 @@
             <div class="example">
                 <h3>Example 10: Underline Text Formatting</h3>
                 <p>Text with <u>underline formatting</u> for emphasis:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="3000"&gt;</pre>
                     <pre>    This text has &lt;u&gt;Underline Text&lt;/u&gt; that will animate with Underline.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -183,7 +183,7 @@
             <div class="example">
                 <h3>Example 11: Anchor Link Formatting</h3>
                 <p>Text containing <a href="#">Clickable links</a> that animate with the typewriter effect:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="3000"&gt;</pre>
                     <pre>    Visit our &lt;a href="https://github.com/AsadullahAlMunib/TTAS/"&gt;WEBSITE&lt;/a&gt; for more information about TTAS library.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -194,7 +194,7 @@
             <div class="example">
                 <h3>Example 12: Code Element Formatting</h3>
                 <p>Text containing <code>code elements</code> that will animate with the typewriter effect:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="3000"&gt;</pre>
                     <pre>    Use the &lt;code&gt;data-ttas&lt;/code&gt; attribute with your HTML elements to enable the typing animation effect on scroll.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -205,7 +205,7 @@
             <div class="example">
                 <h3>Example 13: Complex Formatted Text</h3>
                 <p>Text with <strong>multiple</strong> <em>formatting</em> <u>options</u> and <a href="#">links</a>:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>&lt;p data-ttas="5000"&gt;</pre>
                     <pre>    The &lt;strong&gt;TTAS Library&lt;/strong&gt; allows you &lt;em&gt;to create beautiful&lt;/em&gt; Typewriter Animations by &lt;code&gt;data-ttas&lt;/code&gt; Attribute with support for &lt;u&gt;Formatted text&lt;/u&gt; and even &lt;a href="#"&gt;Clickable Links&lt;/a&gt; that animate smoothly.</pre>
                     <pre>&lt;/p&gt;</pre>
@@ -224,8 +224,8 @@
             
             <div class="example">
                 <h3>Initialization</h3>
-                <div class="code">
-                    <pre>// Initialize or reinitialize TTAS</pre>
+                <div class="code" onclick="copyCode(this)">
+                    <pre>//Initialize or reinitialize TTAS</pre>
                     <pre>TTAS.init();</pre>
                 </div>
                 <button class="btn" onclick="TTAS.init()">Initialize TTAS</button>
@@ -233,8 +233,8 @@
             
             <div class="example">
                 <h3>Destroy</h3>
-                <div class="code">
-                    <pre>// Remove all TTAS functionality</pre>
+                <div class="code" onclick="copyCode(this)">
+                    <pre>//Remove all TTAS functionality</pre>
                     <pre>TTAS.destroy(); </pre>
                 </div>
                 <button class="btn" onclick="TTAS.destroy()">Destroy TTAS</button>
@@ -242,7 +242,7 @@
             
             <div class="example">
                 <h3>Check Support</h3>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>if (TTAS.supportsObserver) {</pre>
                     <pre>    console.log('IntersectionObserver is supported' + TTAS.supportsObserver);</pre>
                     <pre>}</pre>
@@ -252,7 +252,7 @@
             
             <div class="example">
                 <h3>Version Info</h3>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>console.log('TTAS version:', TTAS.version);</pre>
                 </div>
                 <button class="btn" onclick="alert('TTAS version: ' + TTAS.version)">Show Version</button>
@@ -268,7 +268,7 @@
             <div class="example">
                 <h3>Custom Cursor Style</h3>
                 <p>You can customize the blinking cursor with CSS:</p>
-                <div class="code">
+                <div class="code" onclick="copyCode(this)">
                     <pre>.ttas-cursor {</pre>
                     <pre>    background-color: #ff5722;</pre>
                     <pre>    width: 3px;</pre>
